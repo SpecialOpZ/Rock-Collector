@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7ow-at-YIX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12084"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainVC" customModule="Rock_Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,162 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kkx-X2-gvj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="79" id="qFl-5g-xr9" customClass="RockCell" customModule="Rock_Collector" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qFl-5g-xr9" id="nkE-qY-37y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock2" translatesAutoresizingMaskIntoConstraints="NO" id="GrI-Id-CK0">
+                                                    <rect key="frame" x="8" y="1" width="75" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="QLK-gH-Bda"/>
+                                                        <constraint firstAttribute="height" constant="75" id="az5-6z-5st"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIj-qF-4Nj">
+                                                    <rect key="frame" x="91" y="30.5" width="276" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aIj-qF-4Nj" firstAttribute="top" secondItem="nkE-qY-37y" secondAttribute="topMargin" constant="22" id="L5U-wp-IFk"/>
+                                                <constraint firstItem="GrI-Id-CK0" firstAttribute="top" secondItem="nkE-qY-37y" secondAttribute="top" constant="1" id="RnZ-ws-dZW"/>
+                                                <constraint firstAttribute="bottom" secondItem="GrI-Id-CK0" secondAttribute="bottom" constant="1" id="gYX-L4-JjL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aIj-qF-4Nj" secondAttribute="bottom" constant="19.5" id="oUu-G2-W83"/>
+                                                <constraint firstItem="GrI-Id-CK0" firstAttribute="leading" secondItem="nkE-qY-37y" secondAttribute="leading" constant="8" id="vSl-YS-8tT"/>
+                                                <constraint firstItem="aIj-qF-4Nj" firstAttribute="trailing" secondItem="nkE-qY-37y" secondAttribute="trailingMargin" id="yNw-ii-oDp"/>
+                                                <constraint firstItem="aIj-qF-4Nj" firstAttribute="leading" secondItem="GrI-Id-CK0" secondAttribute="trailing" constant="8" id="yoP-on-bnH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="aIj-qF-4Nj" id="nha-5W-J9T"/>
+                                            <outlet property="rockImageView" destination="GrI-Id-CK0" id="vF1-LD-sys"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kkx-X2-gvj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uyy-qp-Z2O"/>
+                            <constraint firstItem="Kkx-X2-gvj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bbW-W7-aKk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kkx-X2-gvj" secondAttribute="bottom" id="kAn-vh-c2z"/>
+                            <constraint firstAttribute="trailing" secondItem="Kkx-X2-gvj" secondAttribute="trailing" id="lYV-Rt-u94"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XJu-2y-7Ys">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zc1-zP-M7W">
+                            <connections>
+                                <segue destination="GfX-mw-vUC" kind="show" id="0Nr-UO-ziW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Kkx-X2-gvj" id="jc8-FP-j4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="484" y="130.88455772113943"/>
+        </scene>
+        <!--RockVC-->
+        <scene sceneID="a13-fe-08U">
+            <objects>
+                <viewController id="GfX-mw-vUC" customClass="RockVC" customModule="Rock_Collector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lrM-IU-5Bc"/>
+                        <viewControllerLayoutGuide type="bottom" id="EXF-de-PWO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="7yr-ST-nXE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock1" translatesAutoresizingMaskIntoConstraints="NO" id="yG7-Px-rD5">
+                                <rect key="frame" x="75" y="84" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="0z6-pI-j1C"/>
+                                    <constraint firstAttribute="width" constant="225" id="N26-by-1It"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter rock name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDD-li-Gey">
+                                <rect key="frame" x="75" y="328" width="225" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGh-En-DaX">
+                                <rect key="frame" x="172" y="376" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="submitRockButtonPressed:" destination="GfX-mw-vUC" eventType="touchUpInside" id="axh-QE-bu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KGh-En-DaX" firstAttribute="top" secondItem="nDD-li-Gey" secondAttribute="bottom" constant="18" id="5y2-c4-rMq"/>
+                            <constraint firstItem="yG7-Px-rD5" firstAttribute="leading" secondItem="7yr-ST-nXE" secondAttribute="leadingMargin" constant="59" id="6wZ-Xb-3Jq"/>
+                            <constraint firstItem="yG7-Px-rD5" firstAttribute="top" secondItem="lrM-IU-5Bc" secondAttribute="bottom" constant="20" id="IXL-1Z-gSy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yG7-Px-rD5" secondAttribute="trailing" constant="59" id="NoA-6F-GvL"/>
+                            <constraint firstItem="nDD-li-Gey" firstAttribute="top" secondItem="yG7-Px-rD5" secondAttribute="bottom" constant="19" id="Wfz-PO-7Bu"/>
+                            <constraint firstItem="nDD-li-Gey" firstAttribute="width" secondItem="yG7-Px-rD5" secondAttribute="width" id="kiR-cT-NzE"/>
+                            <constraint firstItem="KGh-En-DaX" firstAttribute="centerX" secondItem="7yr-ST-nXE" secondAttribute="centerX" id="mS7-j0-Uax"/>
+                            <constraint firstItem="nDD-li-Gey" firstAttribute="centerX" secondItem="7yr-ST-nXE" secondAttribute="centerX" id="nb4-S5-Hz3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Ig-14-TYV">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="dpY-bc-HLL">
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="GfX-mw-vUC" id="2w7-N3-JrB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="lP3-3a-wCZ">
+                                <connections>
+                                    <action selector="photosButtonTapped:" destination="GfX-mw-vUC" id="13p-Zu-QfO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enterRockTextField" destination="nDD-li-Gey" id="nPK-Bs-shM"/>
+                        <outlet property="rockImageView" destination="yG7-Px-rD5" id="mmo-tf-bxn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgK-NY-EbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z2o-KV-Mdp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ow-at-YIX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AmZ-uO-fMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mVa-az-0EI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpG-fJ-xei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rock1" width="262" height="193"/>
+        <image name="Rock2" width="275" height="183"/>
+    </resources>
 </document>
