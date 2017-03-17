@@ -32,6 +32,16 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! RockVC
+        nextVC.rock = sender as? Rock
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRock = rocks[indexPath.row]
+        performSegue(withIdentifier: "rockSegue", sender: selectedRock)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

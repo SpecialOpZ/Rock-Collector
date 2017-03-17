@@ -77,7 +77,7 @@
                     <navigationItem key="navigationItem" id="XJu-2y-7Ys">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zc1-zP-M7W">
                             <connections>
-                                <segue destination="GfX-mw-vUC" kind="show" id="0Nr-UO-ziW"/>
+                                <segue destination="GfX-mw-vUC" kind="show" identifier="rockSegue" id="0Nr-UO-ziW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -121,6 +121,13 @@
                                     <action selector="submitRockButtonPressed:" destination="GfX-mw-vUC" eventType="touchUpInside" id="axh-QE-bu9"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-SS-Nzp">
+                                <rect key="frame" x="165" y="414" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="GfX-mw-vUC" eventType="touchUpInside" id="ZVk-47-CS1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -129,9 +136,11 @@
                             <constraint firstItem="yG7-Px-rD5" firstAttribute="top" secondItem="lrM-IU-5Bc" secondAttribute="bottom" constant="20" id="IXL-1Z-gSy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yG7-Px-rD5" secondAttribute="trailing" constant="59" id="NoA-6F-GvL"/>
                             <constraint firstItem="nDD-li-Gey" firstAttribute="top" secondItem="yG7-Px-rD5" secondAttribute="bottom" constant="19" id="Wfz-PO-7Bu"/>
+                            <constraint firstItem="fWN-SS-Nzp" firstAttribute="top" secondItem="KGh-En-DaX" secondAttribute="bottom" constant="8" id="dIC-l9-j96"/>
                             <constraint firstItem="nDD-li-Gey" firstAttribute="width" secondItem="yG7-Px-rD5" secondAttribute="width" id="kiR-cT-NzE"/>
                             <constraint firstItem="KGh-En-DaX" firstAttribute="centerX" secondItem="7yr-ST-nXE" secondAttribute="centerX" id="mS7-j0-Uax"/>
                             <constraint firstItem="nDD-li-Gey" firstAttribute="centerX" secondItem="7yr-ST-nXE" secondAttribute="centerX" id="nb4-S5-Hz3"/>
+                            <constraint firstItem="fWN-SS-Nzp" firstAttribute="centerX" secondItem="7yr-ST-nXE" secondAttribute="centerX" id="qV6-qh-WPe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Ig-14-TYV">
@@ -149,6 +158,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="KGh-En-DaX" id="aJR-xe-QiA"/>
+                        <outlet property="deleteButton" destination="fWN-SS-Nzp" id="uG4-Lm-g6Q"/>
                         <outlet property="enterRockTextField" destination="nDD-li-Gey" id="nPK-Bs-shM"/>
                         <outlet property="rockImageView" destination="yG7-Px-rD5" id="mmo-tf-bxn"/>
                     </connections>
