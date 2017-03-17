@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92A350CD1E7B765E003A7994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A350CC1E7B765E003A7994 /* AppDelegate.swift */; };
-		92A350CF1E7B765E003A7994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A350CE1E7B765E003A7994 /* ViewController.swift */; };
+		92A350CF1E7B765E003A7994 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A350CE1E7B765E003A7994 /* MainVC.swift */; };
 		92A350D21E7B765E003A7994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A350D01E7B765E003A7994 /* Main.storyboard */; };
 		92A350D51E7B765E003A7994 /* Rock_Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A350D31E7B765E003A7994 /* Rock_Collector.xcdatamodeld */; };
 		92A350D71E7B765E003A7994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A350D61E7B765E003A7994 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		92A350C91E7B765E003A7994 /* Rock Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A350CC1E7B765E003A7994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92A350CE1E7B765E003A7994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92A350CE1E7B765E003A7994 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		92A350D11E7B765E003A7994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92A350D41E7B765E003A7994 /* Rock_Collector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rock_Collector.xcdatamodel; sourceTree = "<group>"; };
 		92A350D61E7B765E003A7994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,13 +56,13 @@
 		92A350CB1E7B765E003A7994 /* Rock Collector */ = {
 			isa = PBXGroup;
 			children = (
-				92A350CC1E7B765E003A7994 /* AppDelegate.swift */,
-				92A350CE1E7B765E003A7994 /* ViewController.swift */,
+				92A350CE1E7B765E003A7994 /* MainVC.swift */,
 				92A350D01E7B765E003A7994 /* Main.storyboard */,
 				92A350D61E7B765E003A7994 /* Assets.xcassets */,
 				92A350D81E7B765E003A7994 /* LaunchScreen.storyboard */,
 				92A350DB1E7B765E003A7994 /* Info.plist */,
 				92A350D31E7B765E003A7994 /* Rock_Collector.xcdatamodeld */,
+				92A350CC1E7B765E003A7994 /* AppDelegate.swift */,
 			);
 			path = "Rock Collector";
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A350D51E7B765E003A7994 /* Rock_Collector.xcdatamodeld in Sources */,
-				92A350CF1E7B765E003A7994 /* ViewController.swift in Sources */,
+				92A350CF1E7B765E003A7994 /* MainVC.swift in Sources */,
 				92A350CD1E7B765E003A7994 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
